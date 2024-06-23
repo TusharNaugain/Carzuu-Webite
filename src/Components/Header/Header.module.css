@@ -1,0 +1,106 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #c69d3c;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+}
+
+.headerItem {
+  margin-right: 20px;
+  position: relative;
+}
+
+.headerLink {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.headerLink:hover {
+  color: #ccc;
+}
+
+.toggleButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: transform 1s ease;
+}
+
+.toggleButton:focus {
+  outline: none;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+  animation: slideDown 0.1s ease forwards;
+}
+
+.dropdownMenu li {
+  margin-bottom: 10px;
+}
+
+.dropdownMenu li:last-child {
+  margin-bottom: 0;
+}
+
+.dropdownMenu a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.4s ease;
+}
+
+.dropdownMenu a:hover {
+  color: #ccc;
+}
+
+.headerItem:hover .dropdownMenu {
+  display: block;
+}
+
+.toggleButton.open {
+  transform: rotate(90deg); /* Example of a rotation animation when opened */
+}
+
+/* Animations */
+@keyframes slideDown {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headerItem {
+    margin-right: 0;
+  }
+  .dropdownMenu {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+}

@@ -1,0 +1,101 @@
+/* About.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1ca1a8;
+  margin: 0;
+  padding: 0;
+}
+
+.about-container {
+  padding: 20px;
+  max-width: 1300px;
+  margin: 40px auto;
+  background: #012c3f;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.about-header h1 {
+  font-size: 2.5em;
+  color: #14afb7;
+}
+
+.about-content {
+  line-height: 1.6;
+  color: #af9494;
+}
+
+.about-content h2 {
+  margin-top: 20px;
+  color: #8d4646;
+}
+
+.about-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-content ul li {
+  margin: 5px 0;
+}
+
+.carousel {
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.animated {
+  opacity: 0;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
